@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/doublify/pre-commit-go
+    rev: 208a4aaa7f86b44e961eaaea526743b920e187a0
+    hooks:
+      - id: fmt
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: ^(3rd|doc)\/
+      - id: end-of-file-fixer
+        exclude: ^(3rd|doc)\/
+      - id: check-added-large-files
+        args: [ "--maxkb=65536" ] # 64MB
